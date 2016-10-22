@@ -2,8 +2,10 @@
 using System.Net.Http;
 using System.Web.UI;
 using System.Text.RegularExpressions;
+using SpeechLib;
 public partial class _Default : System.Web.UI.Page
 {
+    SpVoice Voice = new SpVoice();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["mode"] != null && Request.QueryString["mode"] == "ajax" && Request.Form["FirstName"] != null)
@@ -28,6 +30,8 @@ public partial class _Default : System.Web.UI.Page
         var task = client.GetAsync(url);
         x = task.Result.Content.ReadAsStringAsync().Result;
         while (x == null) ;
+
+        
         string[] tokens = x.Split(new[] { "--::--" }, StringSplitOptions.None);
         string[] s = tokens[0].Split(new[] { "::::" }, StringSplitOptions.None);
         string result = textSummarizer(s[1]);
@@ -38,22 +42,26 @@ public partial class _Default : System.Web.UI.Page
         result = textSummarizer(s[1]);
         Div6.InnerHtml = result;
         Div5.InnerHtml = s[0];
+       
 
         s = tokens[2].Split(new[] { "::::" }, StringSplitOptions.None);
         result = textSummarizer(s[1]);
         Div9.InnerHtml = result;
         Div8.InnerHtml = s[0];
+        
         Page.ClientScript.RegisterStartupScript(this.GetType(), "myScript", "AnotherFunction();", true);
-    }
 
+        Voice.Speak(Div3.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+        Voice.Speak(Div6.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+        Voice.Speak(Div9.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+    }
     protected void btnCheck_Click(object sender, EventArgs e)
     {
         var star = Session["stars"];
         Response.Write(star);
     }
 
-
-
+   
     static string stpHandler(string para)
     {
         string[] stopWordsList = new string[] {
