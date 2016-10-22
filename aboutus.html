@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+    <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="../bower_components/paper-item/paper-item.html">
+    <link rel="import" href="../bower_components/paper-input/paper-input.html">
+    <link rel="import" href="../bower_components/paper-material/paper-material.html">
+    <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<title>
+		About Us
+	</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("h2").click(function(){
+        $(this).hide();
+    });
+});
+
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+        
+        $('#focusimage').addClass('animated bounceInLeft');
+        $('#passionimage').addClass('animated fadeInLeft');
+        $('#empathyimage').addClass('animated lightSpeedIn');
+        $('#teamworkimage').addClass('animated fadeInRight'); //add infinite in between if needed
+    }
+
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1100) {
+         $('#sunnyimage').addClass('animated bounceInLeft');
+     }
+
+     if ($(this).scrollTop() > 1500) {
+         $('#kishlayimage').addClass('animated bounceInRight');
+     }
+    
+    if ($(this).scrollTop() > 1900) {
+         $('#sushantimage').addClass('animated bounceInLeft');
+     }
+
+});
+
+
+
+</script>
+
+<style type="text/css">
+	h2{
+		font-family: Arial;
+		font-size: 40px;
+		color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+	}
+
+	h3{
+		font-family: Times;
+		font-size: 18px;
+		color: #D62323;
+		padding: 5px;
+	}
+
+	body{
+		font-family: Arial;
+	}
+
+</style>
+
+</head>
+<body style="margin:0;padding:0;">
+<div id="div1" style="background-color:#D62323; height:900px; width:100%; margin:0px; padding:0px;">
+<paper-toolbar style="background-color:#D62323;">
+  <paper-icon-button icon="menu" on-tap="menuAction"></paper-icon-button>
+  <div class="title">Title</div>
+  <paper-icon-button icon="more-vert" on-tap="moreAction"></paper-icon-button>
+</paper-toolbar>
+
+<table style="float:right; margin-right:55px; margin-top:150px;"cellspacing="10px">
+<tr>
+<td>
+<label id="biglabel" style="color: white;font-size: 150px;text-align: right; font-family:Arial;">HIGH VALUES</label>
+</td>
+</tr>
+<tr  >
+<td style="text-align:center">
+<label  id="secondlabel" style="color: white;font-size: 25px;">OUR SUCCESS IS NOT ONLY DUE TO THE QUALITY OF OUR WORK;</label>
+</td>
+</tr>
+<td style="text-align:center">
+<label id="thirdlabel" style="color: white;font-size: 25px;">IT IS DOWN TO ATTITUDE, OUR APPROACH AND THE WAY WE TREAT OUR CLIENTS.</label>
+</td>
+</tr>
+</table>
+</div>
+<div style="background-color:#E3E3E3;height:900px; width:100%; margin:0px; padding:0px; vertical-align: top; display:inline-block;">
+	
+	<table style="width:90%;height:100%;border:0;border-spacing:0;border-collapse: collapse;" align="center" cellspacing="0" cellpadding="0">
+		
+		<tr>
+		<td style="width:25%; height:50px;"align="center">
+		<h2>01</h2>
+		</td>
+		<td style="width:25%;height:50px;"  align="center">
+		<h2>02</h2>
+		</td>
+		<td style="width:25%;height:50px;" align="center">
+		<h2>03</h2>
+		</td>
+		<td style="width:25%;height:50px;" align="center">
+		<h2>04</h2>
+		</td>
+		</tr>
+
+		<tr>
+		<td style="width:20%;" align="center" id="focusimage">
+		<img src="../img/focus.png" style="display:block; width:80%; height:80%;" alt="Sorry">
+		</td>
+		<td style="width:20%;" align="center" id="passionimage">
+		<img src="../img/passion.png" style="display:block; width:80%; height:80%;" alt="Sorry">
+		</td>
+		<td style="width:20%;" align="center" id="empathyimage">
+		<img src="../img/empathy.png" style="display:block; width:80%; height:80%;" alt="Sorry">
+		</td>
+		<td style="width:20%;" align="center" id="teamworkimage">
+		<img src="../img/teamwork.png" style="display:block; width:80%; height:80%;" alt="Sorry">
+		</td>
+		</tr>
+
+		<tr style=" vertical-align: top;" >
+		<td style="width:20%;" align="center">
+		<h3>We have a 100% commitment to making all our sites the best they can possibly be, no matter what it takes to get there.</h3>
+		</td>
+		<td style="width:20%;" align="center">
+		<h3>Our desire to produce good work runs deep, that is what lets us handle every project with fresh energy and enthusiasm.</h3>
+		</td>
+		<td style="width:20%;" align="center">
+		<h3>While we share our knowledge and experience, we listen hard to understand your business and your needs.</h3>
+		</td>
+		<td style="width:20%;" align="center">
+		<h3>We are united with you in the drive to get the best from your project – think of us as extra members of your team with all the skills you need.</h3>
+		</td>
+		</tr>
+	</table>
+</div>
+<div style="background-color:#404040;height:140px; width:100%; margin:0px; padding:0px; vertical-align: top; display:inline-block;"><h1 style="color:white; font-size:40px; font-family:Times; padding-top:30px; " align="center" class="animated infinite pulse">Meet the Team</div>
+
+<div style="background-color:#ffffff;height:500px; width:100%; margin:0px; padding:0px; vertical-align: top; display:inline-block;">
+<table width="100%" cellpadding="30px">
+	<tr>
+		<td width="70%">
+		<label style="margin-left:400px;font-size:50px;color:#404040">Sunny Bhalotia</label><br/>
+		<label style="margin-left:450px;font-size:35px;color:#404011">140911462</label><br/>
+		</td>
+		<td>
+		<img src="../img/Sunny.png" style="width:400px;height:400px;" id="sunnyimage">
+		</td>
+	</tr>
+</table>
+</div>
+
+<div style="background-color:#ffffff;height:500px; width:100%; margin:0px; padding:0px; vertical-align: top; display:inline-block;">
+<table width="100%" cellpadding="30px">
+	<tr>
+
+	<td width="30%">
+		<img src="../img/Kishlay.png" style="width:400px;height:400px;" id="kishlayimage">
+		</td>
+		<td width="70%">
+		<label style="margin-left:400px;font-size:50px;color:#404040">Kishlay Kumar</label><br/>
+		<label style="margin-left:450px;font-size:35px;color:#404011">140911206</label><br/>
+		</td>
+		
+	</tr>
+</table>
+</div>
+
+<div style="background-color:#ffffff;height:500px; width:100%; margin:0px; padding:0px; vertical-align: top; display:inline-block;">
+<table width="100%" cellpadding="30px">
+	<tr>
+		<td width="70%">
+		<label style="margin-left:400px;font-size:50px;color:#404040">Sushant Bhat</label><br/>
+		<label style="margin-left:450px;font-size:35px;color:#404011">140911336</label><br/>
+		</td>
+		<td>
+		<img src="../img/Sushant.png" style="width:400px;height:400px; " id="sushantimage">
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

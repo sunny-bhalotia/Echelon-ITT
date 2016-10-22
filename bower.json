@@ -1,0 +1,21 @@
+{
+  "name": "polymer",
+  "description": "level up polymer test",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.6.1",
+    "paper-elements": "PolymerElements/paper-elements#~1.0.7",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.1.7",
+    "paper-more-button": "~1.0.1",
+    "paper-search": "~1.1.12"
+  }
+}
