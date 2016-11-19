@@ -16,7 +16,7 @@ public partial class _Default : System.Web.UI.Page
         if (Request.QueryString["mode"] != null && Request.QueryString["mode"] == "ajax" && Request.Form["stars"] != null)
         {
             Session["stars"] = Request.Form["stars"] ?? "";
-            Response.Write(Session["stars"]);
+           // Response.Write(Session["stars"]);
         } 
     }   
 
@@ -51,9 +51,9 @@ public partial class _Default : System.Web.UI.Page
         
         Page.ClientScript.RegisterStartupScript(this.GetType(), "myScript", "AnotherFunction();", true);
 
-        Voice.Speak(Div3.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
-        Voice.Speak(Div6.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
-        Voice.Speak(Div9.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+        //Voice.Speak(Div3.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+       // Voice.Speak(Div6.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+        //Voice.Speak(Div9.InnerText+"....", SpeechVoiceSpeakFlags.SVSFlagsAsync);
     }
     protected void btnCheck_Click(object sender, EventArgs e)
     {
